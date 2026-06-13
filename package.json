@@ -6,6 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node .",
     "start:dev": "NODE_ENV=development node --inspect --watch-path=./ ./dev/server.mjs",
-    "start:dev:mock": "MOCK_STATE=true npm run start:dev"
+    "start:dev:mock": "MOCK_STATE=true npm run start:dev",
+    "test": "node --test"
   }
 }
