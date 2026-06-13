@@ -1,0 +1,408 @@
+{
+  "resultsInfo": {
+    "totalRecords": 79,
+    "timezoneReference": "Le date sono riferite al fuso orario dell'Europa Centrale",
+    "currency": "Dollaro USA",
+    "isoCode": "USD",
+    "uicCode": "001",
+    "exchangeConventionCode": "C",
+    "notice": "DISCLAIMER: Le quotazioni riportate sul portale dei tassi di cambio non sono in tempo reale e sono pubblicate in ritardo rispetto al momento della loro rilevazione. Fatta eccezione per i casi previsti dalla normativa italiana, i tassi di cambio pubblicati hanno valore puramente indicativo e non costituiscono benchmark finanziario secondo quanto previsto dal Regolamento UE 2016/1011. La Banca d’Italia non risponde per l’utilizzo che venga fatto per finalità diverse da quelle previste dall’ordinamento italiano e la responsabilità per il loro eventuale impiego ricade unicamente sugli utenti.Le quotazioni dei tassi di cambio contro euro delle principali valute sono elaborate di concerto con le altre Banche Centrali del SEBC.In caso di variazioni nei sistemi valutari, la Banca d’Italia provvederà ad aggiornare le quotazioni con decorrenza dalla data nella quale queste sono state rilevate e verificate; ne sarà data informativa nella sezione “Avvisi”. La Banca d’Italia declina ogni responsabilità in merito a eventuali errori o inesattezze per qualsiasi ragione causati.Si raccomanda la lettura degli Avvisi prima di procedere alla consultazione dei tassi di cambio."
+  },
+  "rates": [
+    {
+      "referenceDate": "2025-09-10",
+      "avgRate": "1.1707",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-11",
+      "avgRate": "1.1685",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-12",
+      "avgRate": "1.1718",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-15",
+      "avgRate": "1.1766",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-16",
+      "avgRate": "1.1807",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-17",
+      "avgRate": "1.1837",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-18",
+      "avgRate": "1.1818",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-19",
+      "avgRate": "1.1736",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-22",
+      "avgRate": "1.1781",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-23",
+      "avgRate": "1.1793",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-24",
+      "avgRate": "1.1756",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-25",
+      "avgRate": "1.1739",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-26",
+      "avgRate": "1.1672",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-29",
+      "avgRate": "1.1723",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-09-30",
+      "avgRate": "1.1741",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-01",
+      "avgRate": "1.1724",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-02",
+      "avgRate": "1.1754",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-03",
+      "avgRate": "1.1734",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-06",
+      "avgRate": "1.1678",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-07",
+      "avgRate": "1.1666",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-08",
+      "avgRate": "1.1627",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-09",
+      "avgRate": "1.1611",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-10",
+      "avgRate": "1.1568",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-13",
+      "avgRate": "1.1569",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-14",
+      "avgRate": "1.1553",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-15",
+      "avgRate": "1.1622",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-16",
+      "avgRate": "1.1649",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-17",
+      "avgRate": "1.1681",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-20",
+      "avgRate": "1.1655",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-21",
+      "avgRate": "1.1607",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-22",
+      "avgRate": "1.1587",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-23",
+      "avgRate": "1.1593",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-24",
+      "avgRate": "1.1612",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-27",
+      "avgRate": "1.1640",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-28",
+      "avgRate": "1.1630",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-29",
+      "avgRate": "1.1636",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-30",
+      "avgRate": "1.1550",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-10-31",
+      "avgRate": "1.1554",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-03",
+      "avgRate": "1.1514",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-04",
+      "avgRate": "1.1491",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-05",
+      "avgRate": "1.1492",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-06",
+      "avgRate": "1.1533",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-07",
+      "avgRate": "1.1561",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-10",
+      "avgRate": "1.1571",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-11",
+      "avgRate": "1.1575",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-12",
+      "avgRate": "1.1576",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-13",
+      "avgRate": "1.1619",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-14",
+      "avgRate": "1.1648",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-17",
+      "avgRate": "1.1593",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-18",
+      "avgRate": "1.1590",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-19",
+      "avgRate": "1.1583",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-20",
+      "avgRate": "1.1514",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-21",
+      "avgRate": "1.1520",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-24",
+      "avgRate": "1.1544",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-25",
+      "avgRate": "1.1551",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-26",
+      "avgRate": "1.1577",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-27",
+      "avgRate": "1.1586",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-11-28",
+      "avgRate": "1.1566",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-01",
+      "avgRate": "1.1646",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-02",
+      "avgRate": "1.1614",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-03",
+      "avgRate": "1.1668",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-04",
+      "avgRate": "1.1666",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-05",
+      "avgRate": "1.1645",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-08",
+      "avgRate": "1.1655",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-09",
+      "avgRate": "1.1637",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-10",
+      "avgRate": "1.1634",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-11",
+      "avgRate": "1.1714",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-12",
+      "avgRate": "1.1731",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-15",
+      "avgRate": "1.1753",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-16",
+      "avgRate": "1.1776",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-17",
+      "avgRate": "1.1722",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-18",
+      "avgRate": "1.1719",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-19",
+      "avgRate": "1.1712",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-22",
+      "avgRate": "1.1745",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-23",
+      "avgRate": "1.1786",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-24",
+      "avgRate": "1.1787",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-29",
+      "avgRate": "1.1766",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-30",
+      "avgRate": "1.1757",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    },
+    {
+      "referenceDate": "2025-12-31",
+      "avgRate": "1.1750",
+      "exchangeConvention": "Quantita' di valuta estera per 1 Euro."
+    }
+  ]
+}
