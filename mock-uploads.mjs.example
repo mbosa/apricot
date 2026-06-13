@@ -1,0 +1,189 @@
+export const larkanHoldingsMock = {
+  meta: {
+    ticker: 'Larkan AB RSU Program',
+    currency: 'SEK',
+    filter: 'All',
+  },
+  data: [
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10001',
+      issuanceDate: '01-Oct-2024',
+      quantityTimes100: 1000,
+      issuanceValueUnit: {
+        value: 8613,
+        currency: 'SEK',
+      },
+    },
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10002',
+      issuanceDate: '01-Jan-2025',
+      quantityTimes100: 2000,
+      issuanceValueUnit: {
+        value: 9404,
+        currency: 'SEK',
+      },
+    },
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10003',
+      issuanceDate: '01-Apr-2025',
+      quantityTimes100: 3000,
+      issuanceValueUnit: {
+        value: 8554,
+        currency: 'SEK',
+      },
+    },
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10004',
+      issuanceDate: '01-Oct-2025',
+      quantityTimes100: 4000,
+      issuanceValueUnit: {
+        value: 8653,
+        currency: 'SEK',
+      },
+    },
+  ],
+}
+
+export const klarnaHoldingsMock = {
+  meta: {
+    ticker: 'KLARNA GROUP PLC',
+    currency: 'USD',
+    filter: 'All',
+  },
+  data: [
+    {
+      ticker: 'KLARNA GROUP PLC',
+      certificateNumber: '20001',
+      issuanceDate: '11-Sep-2025',
+      quantityTimes100: 3700,
+      issuanceValueUnit: {
+        value: 4000,
+        currency: 'USD',
+      },
+    },
+    {
+      ticker: 'KLARNA GROUP PLC',
+      certificateNumber: '20002',
+      issuanceDate: '24-Oct-2025',
+      quantityTimes100: 1000,
+      issuanceValueUnit: {
+        value: 3656,
+        currency: 'USD',
+      },
+    },
+  ],
+}
+
+export const larkanSalesMock = {
+  meta: {
+    ticker: 'Larkan AB RSU Program',
+    currency: 'SEK',
+    filter: '2025',
+  },
+  data: [
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10001',
+      issuanceDate: '01-Oct-2024',
+      saleDate: '11-Sep-2025',
+      issuanceValueUnit: {
+        value: 8613,
+        currency: 'SEK',
+      },
+      quantityTimes100: 1000,
+      salePriceUnit: {
+        value: 9607,
+        currency: 'SEK',
+      },
+    },
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10002',
+      issuanceDate: '01-Jan-2025',
+      saleDate: '11-Sep-2025',
+      issuanceValueUnit: {
+        value: 9404,
+        currency: 'SEK',
+      },
+      quantityTimes100: 2000,
+      salePriceUnit: {
+        value: 9607,
+        currency: 'SEK',
+      },
+    },
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10003',
+      issuanceDate: '01-Apr-2025',
+      saleDate: '11-Sep-2025',
+      issuanceValueUnit: {
+        value: 8554,
+        currency: 'SEK',
+      },
+      quantityTimes100: 100,
+      salePriceUnit: {
+        value: 9607,
+        currency: 'SEK',
+      },
+    },
+    {
+      ticker: 'Larkan AB RSU Program',
+      certificateNumber: '10004',
+      issuanceDate: '01-Oct-2025',
+      saleDate: '11-Sep-2025',
+      issuanceValueUnit: {
+        value: 8653,
+        currency: 'SEK',
+      },
+      quantityTimes100: 3200,
+      salePriceUnit: {
+        value: 9607,
+        currency: 'SEK',
+      },
+    },
+  ],
+}
+
+export const klarnaSalesMock = {
+  meta: {
+    ticker: 'KLARNA GROUP PLC',
+    currency: 'USD',
+    filter: '2025',
+  },
+  data: [
+    {
+      ticker: 'KLARNA GROUP PLC',
+      certificateNumber: '20001',
+      issuanceDate: '11-Sep-2025',
+      saleDate: '12-Dec-2025',
+      issuanceValueUnit: {
+        value: 4000,
+        currency: 'USD',
+      },
+      quantityTimes100: 3700,
+      salePriceUnit: {
+        value: 3054,
+        currency: 'USD',
+      },
+    },
+    {
+      ticker: 'KLARNA GROUP PLC',
+      certificateNumber: '20002',
+      issuanceDate: '24-Oct-2025',
+      saleDate: '12-Dec-2025',
+      issuanceValueUnit: {
+        value: 3656,
+        currency: 'USD',
+      },
+      quantityTimes100: 1000,
+      salePriceUnit: {
+        value: 3054,
+        currency: 'USD',
+      },
+    },
+  ],
+}

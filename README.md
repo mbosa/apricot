@@ -1,6 +1,17 @@
 # RSU Tax Calculator
 
-A small personal tool to calculate Quadro W and Quadro T values from Equity portal exports. Not a substitute for proper tax advice. See disclaimer below.
+A small personal tool to calculate values for Quadro W and Quadro T from the equity portal exports. Not a substitute for proper tax advice. See disclaimer below.
+
+---
+
+The main logic to calculate the final values is in:
+
+| Quadro | File | Function |
+|--------|------|----------|
+| W | [src/handlers/quadro/quadro-w.mjs](https://github.com/mbosa/apricot/blob/main/src/handlers/quadro/quadro-w.mjs) | `calculateW` |
+| T | [src/handlers/quadro/quadro-t.mjs](https://github.com/mbosa/apricot/blob/main/src/handlers/quadro/quadro-t.mjs) | `calculateT` |
+
+---
 
 ## Usage
 
@@ -32,7 +43,7 @@ npm run start:dev:mock
 
 ## ⚠️ Disclaimer
 
-- This is not tax advice. Double-check the numbers with your accountant.
-- I can't guarantee this is correct. Use at your own risk.
+- This is not tax advice, and I'm not an accountant. Double-check the numbers with yours
 - I take no responsibility for what you write in your own tax report.
-- The exports from the equity portal include your name. The data you upload does not leave your browser and is not sent anywhere. If you don't trust it, delete your name from the reports before uploading them.
+- This is not endorsed by Klarna
+- The exports from the equity portal include your name. The data you upload doesn't leave your browser and is not sent anywhere. If you don't trust it, you can delete your name from the reports before uploading them

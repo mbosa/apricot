@@ -2,6 +2,10 @@
   "name": "rsu-tax-calculator",
   "version": "1.0.0",
   "license": "ISC",
+  "main": "dev/server.mjs",
   "scripts": {
+    "start": "NODE_ENV=production node .",
+    "start:dev": "NODE_ENV=development node --inspect --watch-path=./ ./dev/server.mjs",
+    "start:dev:mock": "MOCK_STATE=true npm run start:dev"
   }
 }

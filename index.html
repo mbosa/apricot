@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSU Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>RSU Tax Calculator</h1>
+
+    <div class="global-error" id="global-error">
+      <strong>Unexpected error</strong>
+      <span id="global-error-message"></span>
+    </div>
+
+    <div class="disclaimer">
+      <strong>⚠ Disclaimer</strong>
+      <ul style="margin: 8px 0 0; padding-left: 20px">
+        <li>
+          This is not tax advice, and I'm not an accountant. Double-check the
+          numbers with yours
+        </li>
+        <li>
+          I take no responsibility for what you write in your own tax report
+        </li>
+        <li>This is not endorsed by Klarna</li>
+        <li>
+          The exports from equity portal include your name. I assure you the
+          data you upload doesn't leave your browser and is not sent anywhere.
+          If you don't trust it, you can delete your name from the reports
+          before uploading them
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Larkan Holdings -->
+    <div class="section">
+      <h2>Upload Larkan Holdings</h2>
+      <div class="section-body">
+        <div class="section-left">
+          <div class="accordion-details">
+            <p>Upload the export of your Larkan holdings.</p>
+            <p>
+              In your equity portal, navigate to the
+              <strong>Holdings</strong> page, <strong>My holdings</strong> tab.
+              Set the following options:
+            </p>
+            <ul>
+              <li>Ticker: Larkan</li>
+              <li>
+                Alternative currency: SEK (the tool will convert the values to
+                EUR)
+              </li>
+              <li>Filter: All</li>
+            </ul>
+            <p>Then hit the <strong>Export</strong> button.</p>
+          </div>
+          <div class="upload-area" id="upload-larkan-holdings">
+            <label>
+              <div class="upload-icon">📂</div>
+              <div>Click to select a CSV file</div>
+              <div class="upload-hint">or drag and drop here</div>
+              <input type="file" id="file-larkan-holdings" accept=".csv" />
+            </label>
+            <div
+              class="file-name"
+              id="name-larkan-holdings"
+              style="display: none"
+            ></div>
+          </div>
+          <div class="accordion" id="accordion-larkan-holdings">
+            <button class="accordion-header">
+              <span>Raw file contents</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div
+              class="accordion-body"
+              id="accordion-body-larkan-holdings"
+            ></div>
+          </div>
+          <div class="accordion" id="accordion-parsed-larkan-holdings">
+            <button class="accordion-header">
+              <span>Parsed data</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div
+              class="accordion-body"
+              id="accordion-body-parsed-larkan-holdings"
+            ></div>
+          </div>
+        </div>
+        <div class="section-right">
+          <img
+            src="assets/larkan-holdings.png"
+            class="section-image"
+            alt="Larkan holdings"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Klarna Holdings -->
+    <div class="section">
+      <h2>Upload Klarna Holdings</h2>
+      <div class="section-body">
+        <div class="section-left">
+          <div class="accordion-details">
+            <p>Upload the export of your Klarna holdings.</p>
+            <p>
+              In your equity portal, navigate to the
+              <strong>Holdings</strong> page, <strong>My holdings</strong> tab.
+              Set the following options:
+            </p>
+            <ul>
+              <li>Ticker: Klarna</li>
+              <li>
+                Alternative currency: USD (the tool will convert the values to
+                EUR)
+              </li>
+              <li>Filter: All</li>
+            </ul>
+            <p>Then hit the <strong>Export</strong> button.</p>
+          </div>
+          <div class="upload-area" id="upload-klarna-holdings">
+            <label>
+              <div class="upload-icon">📂</div>
+              <div>Click to select a CSV file</div>
+              <div class="upload-hint">or drag and drop here</div>
+              <input type="file" id="file-klarna-holdings" accept=".csv" />
+            </label>
+            <div
+              class="file-name"
+              id="name-klarna-holdings"
+              style="display: none"
+            ></div>
+          </div>
+          <div class="accordion" id="accordion-klarna-holdings">
+            <button class="accordion-header">
+              <span>Raw file contents</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div
+              class="accordion-body"
+              id="accordion-body-klarna-holdings"
+            ></div>
+          </div>
+          <div class="accordion" id="accordion-parsed-klarna-holdings">
+            <button class="accordion-header">
+              <span>Parsed data</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div
+              class="accordion-body"
+              id="accordion-body-parsed-klarna-holdings"
+            ></div>
+          </div>
+        </div>
+        <div class="section-right">
+          <img
+            src="assets/klarna-holdings.png"
+            class="section-image"
+            alt="Klarna holdings"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Larkan Sales -->
+    <div class="section">
+      <h2>Upload Larkan Sales</h2>
+      <div class="section-body">
+        <div class="section-left">
+          <div class="accordion-details">
+            <p>Upload the export of your Larkan sales.</p>
+            <p>
+              In your equity portal, navigate to the
+              <strong>Holdings</strong> page. Set the following options:
+            </p>
+            <ul>
+              <li>Ticker: Larkan</li>
+              <li>
+                Alternative currency: SEK (the tool will convert the values to
+                EUR)
+              </li>
+              <li>Filter: 2025</li>
+            </ul>
+            <p>
+              Then switch to the <strong>Sale requests</strong> tab and hit the
+              <strong>Export</strong> button.
+            </p>
+          </div>
+          <div class="upload-area" id="upload-larkan-sales">
+            <label>
+              <div class="upload-icon">📂</div>
+              <div>Click to select a CSV file</div>
+              <div class="upload-hint">or drag and drop here</div>
+              <input type="file" id="file-larkan-sales" accept=".csv" />
+            </label>
+            <div
+              class="file-name"
+              id="name-larkan-sales"
+              style="display: none"
+            ></div>
+          </div>
+          <div class="accordion" id="accordion-larkan-sales">
+            <button class="accordion-header">
+              <span>Raw file contents</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div class="accordion-body" id="accordion-body-larkan-sales"></div>
+          </div>
+          <div class="accordion" id="accordion-parsed-larkan-sales">
+            <button class="accordion-header">
+              <span>Parsed data</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div
+              class="accordion-body"
+              id="accordion-body-parsed-larkan-sales"
+            ></div>
+          </div>
+        </div>
+        <div class="section-right">
+          <img
+            src="assets/larkan-sales.png"
+            class="section-image"
+            alt="Larkan sales"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Klarna Sales -->
+    <div class="section">
+      <h2>Upload Klarna Sales</h2>
+      <div class="section-body">
+        <div class="section-left">
+          <div class="accordion-details">
+            <p>Upload the export of your Klarna sales.</p>
+            <p>
+              In your equity portal, navigate to the
+              <strong>Holdings</strong> page. Set the following options:
+            </p>
+            <ul>
+              <li>Ticker: Klarna</li>
+              <li>
+                Alternative currency: USD (the tool will convert the values to
+                EUR)
+              </li>
+              <li>Filter: 2025</li>
+            </ul>
+            <p>
+              Then switch to the <strong>Sale requests</strong> tab and hit the
+              <strong>Export</strong> button.
+            </p>
+          </div>
+          <div class="upload-area" id="upload-klarna-sales">
+            <label>
+              <div class="upload-icon">📂</div>
+              <div>Click to select a CSV file</div>
+              <div class="upload-hint">or drag and drop here</div>
+              <input type="file" id="file-klarna-sales" accept=".csv" />
+            </label>
+            <div
+              class="file-name"
+              id="name-klarna-sales"
+              style="display: none"
+            ></div>
+          </div>
+          <div class="accordion" id="accordion-klarna-sales">
+            <button class="accordion-header">
+              <span>Raw file contents</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div class="accordion-body" id="accordion-body-klarna-sales"></div>
+          </div>
+          <div class="accordion" id="accordion-parsed-klarna-sales">
+            <button class="accordion-header">
+              <span>Parsed data</span>
+              <span class="accordion-arrow">▼</span>
+            </button>
+            <div
+              class="accordion-body"
+              id="accordion-body-parsed-klarna-sales"
+            ></div>
+          </div>
+        </div>
+        <div class="section-right">
+          <img
+            src="assets/klarna-sales.png"
+            class="section-image"
+            alt="Klarna sales"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Quadro W -->
+    <div class="quadro-wrapper">
+      <div class="quadro-btn-row">
+        <button id="btn-quadro-w" class="btn-calculate">
+          Calculate Quadro W
+        </button>
+      </div>
+      <div id="error-quadro-w" class="upload-error" style="display: none"></div>
+      <div
+        class="accordion"
+        id="accordion-quadro-w"
+        style="margin-bottom: 16px"
+      >
+        <button class="accordion-header" id="accordion-header-quadro-w">
+          <span>Details</span>
+          <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="accordion-body" id="accordion-body-quadro-w">
+          <div class="accordion-details">
+            <p>
+              Investments abroad and/or foreign assets of a financial nature
+              held during 2025.
+            </p>
+            <p><strong>How it's calculated:</strong></p>
+            <ul>
+              <li>Include both Larkan and Klarna shares held during 2025</li>
+              <li>
+                For shares vested <strong>before 2025</strong>
+                <ul>
+                  <li>The start date is Jan 1 2025</li>
+                  <li>The start value is the total value on Jan 1 2025</li>
+                </ul>
+              </li>
+              <li>
+                For shares vested or issued <strong>during 2025</strong>
+                <ul>
+                  <li>The start date is the vesting date</li>
+                  <li>
+                    The start value is the total value at vesting ("FMV at
+                    issuance" in the "My holdings" tab)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                For shares <strong>sold during 2025</strong>
+                <ul>
+                  <li>The end date is the date of the sale</li>
+                  <li>
+                    The end value is the total value at sale ("Sale Price" in
+                    the "Sale requests" tab)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                For shares <strong>not sold during 2025</strong>
+                <ul>
+                  <li>The end date is Dec 31 2025</li>
+                  <li>The end value is the total value on Dec 31 2025</li>
+                </ul>
+              </li>
+              <li>
+                All final values are converted to EUR using the daily exchange
+                rate EUR-SEK or EUR-USD from the Banca d'Italia (<a
+                  href="https://tassidicambio.bancaditalia.it/terzevalute-wf-ui-web/dailyRates"
+                  target="_blank"
+                  >link</a
+                >) at vesting, sale, Jan 01, or Dec 31
+              </li>
+              <li>
+                Values are rounded up or down to the nearest integer
+                <blockquote>
+                  <p><strong>Modalità di arrotondamento</strong></p>
+                  <p>
+                    Gli importi da indicare nella dichiarazione devono essere
+                    arrotondati all'unità di euro per eccesso se la frazione
+                    decimale è uguale o superiore a cinquanta centesimi di euro
+                    oppure per difetto se inferiore a questo limite (ad esempio
+                    65,50 diventa 66; 65,51 diventa 66; 65,49 diventa 65).
+                  </p>
+                </blockquote>
+              </li>
+              <li>Shares are aggregated by start and end dates</li>
+            </ul>
+            <p><strong>Notes:</strong></p>
+            <ul>
+              <li>
+                October Larkan shares vested on Oct 1 and were sold on Oct 24 at
+                the same value. Due to the daily EUR-SEK exchange rate, their
+                start and end values in EUR are different
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="result-w" style="display: none">
+        <div class="result-table-section">
+          <table id="table-w">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Ticker</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Quantity</th>
+                <th>Start value</th>
+                <th>End value</th>
+                <th>Days held</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quadro T -->
+    <div class="quadro-wrapper">
+      <div class="quadro-btn-row">
+        <button id="btn-quadro-t" class="btn-calculate">
+          Calculate Quadro T
+        </button>
+      </div>
+      <div id="error-quadro-t" class="upload-error" style="display: none"></div>
+      <div
+        class="accordion"
+        id="accordion-quadro-t"
+        style="margin-bottom: 16px"
+      >
+        <button class="accordion-header" id="accordion-header-quadro-t">
+          <span>Details</span>
+          <span class="accordion-arrow">▼</span>
+        </button>
+        <div class="accordion-body" id="accordion-body-quadro-t">
+          <div class="accordion-details">
+            <p>Capital gains.</p>
+            <p><strong>How it's calculated:</strong></p>
+            <ul>
+              <li>
+                Include both converted Larkan shares and sold Klarna shares
+              </li>
+              <li>
+                For <strong>Larkan shares converted to Klarna</strong>
+                <ul>
+                  <li>
+                    Costi: value of the Larkan shares at vesting ("Cost Basis at
+                    Issuance" in the "Sale requests" tab)
+                  </li>
+                  <li>
+                    Corrispettivi: value of the Larkan shares at conversion
+                    ("Sale Price" in the "Sale requests" tab)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                For <strong>Klarna shares sold during the year</strong>
+                <ul>
+                  <li>
+                    Costi: value of the Klarna shares at issuance ("Cost Basis
+                    at Issuance" in the "Sale requests" tab)
+                  </li>
+                  <li>
+                    Corrispettivi: value of the Klarna shares at sale ("Sale
+                    Price" in the "Sale requests" tab)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                All costi and corrispettivi are converted to EUR for each
+                individual sale/conversion using the daily exchange rate EUR-SEK
+                or EUR-USD from the Banca d'Italia (<a
+                  href="https://tassidicambio.bancaditalia.it/terzevalute-wf-ui-web/dailyRates"
+                  target="_blank"
+                  >link</a
+                >) at vesting, issuance, or sale
+              </li>
+              <li>
+                Total values are rounded up or down to the nearest integer
+                <blockquote>
+                  <p><strong>Modalità di arrotondamento</strong></p>
+                  <p>
+                    Gli importi da indicare nella dichiarazione devono essere
+                    arrotondati all'unità di euro per eccesso se la frazione
+                    decimale è uguale o superiore a cinquanta centesimi di euro
+                    oppure per difetto se inferiore a questo limite (ad esempio
+                    65,50 diventa 66; 65,51 diventa 66; 65,49 diventa 65).
+                  </p>
+                </blockquote>
+              </li>
+            </ul>
+            <p><strong>Notes:</strong></p>
+            <ul>
+              <li>Only the totals should be reported</li>
+              <li>
+                Capital gains are taxed at 26% and should be added to the
+                section "Sezione II - Plusvalenze assoggettate ad imposta
+                sostitutiva del 26%"
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="result-t" style="display: none">
+        <div class="result-table-section">
+          <table id="table-t">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Ticker</th>
+                <th>Issuance date</th>
+                <th>Sale date</th>
+                <th>Quantity</th>
+                <th>Costi</th>
+                <th>Corrispettivi</th>
+              </tr>
+            </thead>
+            <tbody style="display: none"></tbody>
+            <tfoot></tfoot>
+          </table>
+          <button
+            class="table-toggle"
+            id="toggle-table-t"
+            style="display: none"
+          >
+            ▶ Show sales
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      const lightbox = document.getElementById('lightbox')
+      const lightboxImg = document.getElementById('lightbox-img')
+
+      document.querySelectorAll('.section-image').forEach((img) => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src
+          lightboxImg.alt = img.alt
+          lightbox.classList.add('open')
+        })
+      })
+
+      lightbox.addEventListener('click', () =>
+        lightbox.classList.remove('open'),
+      )
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') lightbox.classList.remove('open')
+      })
+    </script>
+    <script type="module" src="src/index.mjs"></script>
+  </body>
+</html>
