@@ -5,7 +5,7 @@ import {
   formatAmountForReport,
 } from '../../helpers.mjs'
 import { parsedData } from '../../state.mjs'
-import { renderTable } from './helper.mjs'
+import { renderTable, wireDetailToggle } from './helper.mjs'
 
 export function buildQuadroW() {
   const errEl = document.getElementById('error-quadro-w')
@@ -26,11 +26,43 @@ export function buildQuadroW() {
       alignRight: ['startValue', 'endValue'],
       bold: ['startValue', 'endValue', 'holdingDays'],
     })
+
+    // detail table: shows the currency conversion behind each row
+    const detailData = quadroWData.map((el) => ({
+      ticker: el.ticker,
+      startDate: el.startDate,
+      endDate: el.endDate,
+      quantity: el.quantityTimes100 / 100,
+      startValueBase: formatAmountForReport(el.startValueBase, 2).value,
+      startExchangeRate: el.startExchangeRate,
+      startValue: formatAmountForReport(el.startValue, 2).value,
+      endValueBase: formatAmountForReport(el.endValueBase, 2).value,
+      endExchangeRate: el.endExchangeRate,
+      endValue: formatAmountForReport(el.endValue, 2).value,
+      holdingDays: el.holdingDays,
+    }))
+
+    renderTable('table-w-detail', detailData, {
+      alignRight: [
+        'startValueOriginal',
+        'startExchangeRate',
+        'startValue',
+        'endValueOriginal',
+        'endExchangeRate',
+        'endValue',
+      ],
+      bold: ['startValue', 'endValue', 'holdingDays'],
+      reveal: false,
+    })
+
+    wireDetailToggle('toggle-table-w', 'detail-w')
   } catch (err) {
     console.error(err)
 
     document.getElementById('result-w').style.display = 'none'
     document.querySelector('#table-w tbody').innerHTML = ''
+    document.querySelector('#table-w-detail tbody').innerHTML = ''
+    document.getElementById('toggle-table-w').style.display = 'none'
     errEl.textContent = 'Quadro W error: ' + err.message
     errEl.style.display = 'block'
   }
@@ -134,9 +166,9 @@ export function calculateW(data) {
         ticker: d.ticker,
         quantityTimes100: 0,
         startDate: d.startDate,
-        startValue: { value: 0, currency: d.startValueUnit.currency },
+        startValueBase: { value: 0, currency: d.startValueUnit.currency },
         endDate: d.endDate,
-        endValue: { value: 0, currency: d.endValueUnit.currency },
+        endValueBase: { value: 0, currency: d.endValueUnit.currency },
         holdingDays: countDays(d.endDate, d.startDate),
       }
     }
@@ -145,16 +177,21 @@ export function calculateW(data) {
     const endValue = d.quantityTimes100 * d.endValueUnit.value
 
     aggregated[aggregationKey].quantityTimes100 += d.quantityTimes100
-    aggregated[aggregationKey].startValue.value += startValue
-    aggregated[aggregationKey].endValue.value += endValue
+    aggregated[aggregationKey].startValueBase.value += startValue
+    aggregated[aggregationKey].endValueBase.value += endValue
   }
 
   // convert to EUR
   return Object.values(aggregated).map((e) => {
+    const startConverted = convertToEur(e.startValueBase, e.startDate)
+    const endConverted = convertToEur(e.endValueBase, e.endDate)
+
     return {
       ...e,
-      startValue: convertToEur(e.startValue, e.startDate),
-      endValue: convertToEur(e.endValue, e.endDate),
+      startValue: startConverted.result,
+      endValue: endConverted.result,
+      startExchangeRate: startConverted.exchangeRate,
+      endExchangeRate: endConverted.exchangeRate,
     }
   })
 }

@@ -407,6 +407,38 @@
             </thead>
             <tbody></tbody>
           </table>
+          <button
+            class="table-toggle"
+            id="toggle-table-w"
+            style="display: none"
+          >
+            ▶ Show Detailed table
+          </button>
+          <div class="detail-scroll" id="detail-w" style="display: none">
+            <p class="detail-caption">
+              The same table, with the original-currency values and the exchange
+              rates used to convert them to EUR.
+            </p>
+            <table id="table-w-detail">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Ticker</th>
+                  <th>Start date</th>
+                  <th>End date</th>
+                  <th>Quantity</th>
+                  <th>Start value</th>
+                  <th>Start<br />exchange rate</th>
+                  <th>Start value (€)</th>
+                  <th>End value</th>
+                  <th>End<br />exchange rate</th>
+                  <th>End value (€)</th>
+                  <th>Days held</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -503,15 +535,13 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Ticker</th>
-                <th>Issuance date</th>
-                <th>Sale date</th>
                 <th>Quantity</th>
-                <th>Costi</th>
-                <th>Corrispettivi</th>
+                <th style="text-align: right; font-weight: 700">Costi</th>
+                <th style="text-align: right; font-weight: 700">
+                  Corrispettivi
+                </th>
               </tr>
             </thead>
-            <tbody style="display: none"></tbody>
             <tfoot></tfoot>
           </table>
           <button
@@ -519,8 +549,32 @@
             id="toggle-table-t"
             style="display: none"
           >
-            ▶ Show sales
+            ▶ Show Detailed table
           </button>
+          <div class="detail-scroll" id="detail-t" style="display: none">
+            <p class="detail-caption">
+              The individual sales behind the totals, with the original-currency
+              values and the exchange rates used to convert them to EUR.
+            </p>
+            <table id="table-t-detail">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Ticker</th>
+                  <th>Vest date</th>
+                  <th>Sale date</th>
+                  <th>Quantity</th>
+                  <th>Costi</th>
+                  <th>Costi<br />exchange rate</th>
+                  <th>Costi (€)</th>
+                  <th>Corrispettivi</th>
+                  <th>Corrispettivi<br />exchange rate</th>
+                  <th>Corrispettivi (€)</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

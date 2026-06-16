@@ -68,7 +68,7 @@ export function convertToEur(amount, day) {
   // roud to 2 decimals while still keeping the number scaled by 10_000
   const convertedValue = Math.round(value / exchangeRate / 100) * 100
 
-  return { value: convertedValue, currency: 'EUR' }
+  return { result: { value: convertedValue, currency: 'EUR' }, exchangeRate }
 }
 
 // amount.value is multiplied by 100 on collection to make it an integer

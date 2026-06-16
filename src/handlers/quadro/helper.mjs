@@ -1,4 +1,24 @@
-export function renderTable(tableId, rows, { alignRight = [], bold = [], boldHeaders = [] } = {}) {
+// wires a toggle button to show/hide a (hidden-by-default) detail table
+export function wireDetailToggle(buttonId, detailTableId) {
+  const detail = document.getElementById(detailTableId)
+  const btn = document.getElementById(buttonId)
+
+  detail.style.display = 'none'
+  btn.textContent = '▶ Show Detailed table'
+  btn.style.display = 'inline-block'
+
+  btn.onclick = () => {
+    const open = detail.style.display !== 'none'
+    detail.style.display = open ? 'none' : ''
+    btn.textContent = open ? '▶ Show Detailed table' : '▼ Hide Detailed table'
+  }
+}
+
+export function renderTable(
+  tableId,
+  rows,
+  { alignRight = [], bold = [], boldHeaders = [], reveal = true } = {},
+) {
   const tbody = document.querySelector('#' + tableId + ' tbody')
   tbody.innerHTML = ''
   if (!rows.length) {
@@ -11,7 +31,9 @@ export function renderTable(tableId, rows, { alignRight = [], bold = [], boldHea
   // +1 because column 0 is the # index column
   const rightAlignCols = new Set(alignRight.map((k) => keys.indexOf(k) + 1))
   const boldCols = new Set(bold.map((k) => keys.indexOf(k) + 1))
-  const boldHeaderCols = new Set([...boldHeaders, ...bold].map((k) => keys.indexOf(k) + 1))
+  const boldHeaderCols = new Set(
+    [...boldHeaders, ...bold].map((k) => keys.indexOf(k) + 1),
+  )
 
   const ths = document.querySelectorAll('#' + tableId + ' thead th')
   ths.forEach((th, i) => {
@@ -36,8 +58,10 @@ export function renderTable(tableId, rows, { alignRight = [], bold = [], boldHea
     tbody.appendChild(tr)
   }
 
-  const wrapperId = tableId.replace('table-', 'result-')
-  const wrapper = document.getElementById(wrapperId)
-  wrapper.style.display = 'block'
-  wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  if (reveal) {
+    const wrapperId = tableId.replace('table-', 'result-')
+    const wrapper = document.getElementById(wrapperId)
+    wrapper.style.display = 'block'
+    wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
