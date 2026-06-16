@@ -43,10 +43,8 @@ export function attachEvents() {
     if (btn) removeFile(btn.dataset.removeKey, e)
   })
 
-  document
-    .getElementById('btn-quadro-w')
-    .addEventListener('click', buildQuadroW)
-  document
-    .getElementById('btn-quadro-t')
-    .addEventListener('click', buildQuadroT)
+  document.getElementById('btn-calculate').addEventListener('click', () => {
+    buildQuadroW()
+    buildQuadroT()
+  })
 }

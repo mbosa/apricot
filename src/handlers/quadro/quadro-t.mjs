@@ -19,9 +19,7 @@ export function buildQuadroT() {
         <td style="font-weight:600;text-align:right">${formatAmountForReport(quadroTData.totals.corrispettivi).value}</td>
       </tr>`
 
-    const result = document.getElementById('result-t')
-    result.style.display = 'block'
-    result.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById('result-t').style.display = 'block'
 
     // detail table: per-sale breakdown with the currency conversion
     const detailData = quadroTData.sales.map((el) => ({
@@ -29,21 +27,20 @@ export function buildQuadroT() {
       issuanceDate: el.issuanceDate,
       saleDate: el.saleDate,
       quantity: el.quantityTimes100 / 100,
-      costiOriginal: formatAmountForReport(el.costiBase, 2).value,
+      costiBase: formatAmountForReport(el.costiBase, 2).value,
       costiExchangeRate: el.issuanceExchangeRate,
       costi: formatAmountForReport(el.costi, 2).value,
-      corrispettiviOriginal: formatAmountForReport(el.corrispettiviBase, 2)
-        .value,
+      corrispettiviBase: formatAmountForReport(el.corrispettiviBase, 2).value,
       corrispettiviExchangeRate: el.saleExchangeRate,
       corrispettivi: formatAmountForReport(el.corrispettivi, 2).value,
     }))
 
     renderTable('table-t-detail', detailData, {
       alignRight: [
-        'costiOriginal',
+        'costiBase',
         'costiExchangeRate',
         'costi',
-        'corrispettiviOriginal',
+        'corrispettiviBase',
         'corrispettiviExchangeRate',
         'corrispettivi',
       ],

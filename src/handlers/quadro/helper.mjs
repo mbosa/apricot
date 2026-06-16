@@ -60,8 +60,6 @@ export function renderTable(
 
   if (reveal) {
     const wrapperId = tableId.replace('table-', 'result-')
-    const wrapper = document.getElementById(wrapperId)
-    wrapper.style.display = 'block'
-    wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById(wrapperId).style.display = 'block'
   }
 }

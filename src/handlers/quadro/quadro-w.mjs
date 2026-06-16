@@ -44,10 +44,10 @@ export function buildQuadroW() {
 
     renderTable('table-w-detail', detailData, {
       alignRight: [
-        'startValueOriginal',
+        'startValueBase',
         'startExchangeRate',
         'startValue',
-        'endValueOriginal',
+        'endValueBase',
         'endExchangeRate',
         'endValue',
       ],
