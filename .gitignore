@@ -1,4 +1,5 @@
 node_modules/
+dist/
 .npm
 npm-debug.log*
 mock-uploads.mjs
